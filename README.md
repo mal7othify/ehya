@@ -63,7 +63,9 @@ Kotlin/Native treat the host as Intel.
 adb shell am start -n com.eillia.ehya/.MainActivity
 ```
 
-Create a Firebase project and put its `google-services.json` in `androidApp/`.
+The build works out of the box: when `androidApp/google-services.json` (gitignored) is missing it
+is created from `androidApp/google-services.placeholder.json`, and Firebase stays offline. For push
+notifications, analytics and crash reports, replace it with the file from your Firebase project.
 Release signing reads `keystore.properties` in the project root (see `androidApp/build.gradle.kts`);
 without the file the release build is simply unsigned.
 

@@ -1,3 +1,4 @@
+import com.google.firebase.crashlytics.buildtools.gradle.CrashlyticsExtension
 import java.util.Properties
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
@@ -13,6 +14,18 @@ val keystoreProperties =
     val file = rootProject.file("keystore.properties")
     if (file.exists()) file.inputStream().use { load(it) }
   }
+
+// Firebase needs a google-services.json, which is gitignored because it belongs to one Firebase
+// project. Without it the build falls back to the committed placeholder so a fresh clone builds
+// and runs; Firebase services simply stay offline until the real file is dropped in.
+val googleServicesFile = file("google-services.json")
+val googleServicesPlaceholder = file("google-services.placeholder.json")
+if (!googleServicesFile.exists()) {
+  googleServicesPlaceholder.copyTo(googleServicesFile)
+  logger.lifecycle("androidApp: no google-services.json, using the placeholder (Firebase offline).")
+}
+val usingPlaceholderGoogleServices =
+  googleServicesFile.readText() == googleServicesPlaceholder.readText()
 
 android {
   namespace = "com.eillia.ehya"
@@ -66,6 +79,8 @@ android {
       isShrinkResources = true
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
       signingConfigs.findByName("release")?.let { signingConfig = it }
+      // Nothing to upload to with the placeholder project.
+      configure<CrashlyticsExtension> { mappingFileUploadEnabled = !usingPlaceholderGoogleServices }
     }
   }
 
