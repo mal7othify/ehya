@@ -1,0 +1,26 @@
+<resources>
+  <string name="app_name">إحياء</string>
+  <string name="tab_play">اللعب</string>
+  <string name="tab_sunan">السنن</string>
+  <string name="info">معلومات</string>
+  <string name="back">رجوع</string>
+  <string name="share">مشاركة</string>
+  <string name="share_sunnah">مشاركة السنة</string>
+  <string name="share_app">مشاركة التطبيق</string>
+  <string name="howto">الكيفية</string>
+  <string name="passit">تجاوز</string>
+  <string name="tryit">جرب</string>
+  <string name="about">هذا التطبيق يعرض السنن المهجورة لنُحييها مرة أخرى!</string>
+  <string name="play">طريقة اللعب</string>
+  <string name="playsteps">تمرير البطاقة المعروضة إلى اليمين في حال تمت تجربة السُنّة الحالية أو في حال نيتك للتجربة الآن.\nتمرير البطاقة المعروضة إلى اليسار إن لم يكن لديك الوقت الكافي لتجربة هذه السُنّة الآن.\nالبطاقات المُجربة تُحذف، أما البطاقات المتجاوزة فتُعرض مرة أخرى لتتم تجربتها.</string>
+  <string name="playagain">اللعب مرة أخرى!</string>
+  <string name="round_finished">ما شاء الله! جربت كل السنن في هذه الجولة.</string>
+  <string name="shareapp">تحميل تطبيق إحياء لاستعراض السنن المهجورة: %1$s</string>
+  <string name="share_app_prompt">شارك/ـي التطبيق مع أصدقائك ومعارفك</string>
+  <string name="version">إصدار البرنامج: %1$s</string>
+  <string name="no_sunan">لا يوجد سنن متاحة</string>
+  <string name="all_categories">الكل</string>
+  <string name="choose_sunnah">اختر سنة من القائمة لعرض تفاصيلها</string>
+  <string name="loading">جارٍ التحميل…</string>
+  <string name="logo">شعار إحياء</string>
+</resources>

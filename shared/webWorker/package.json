@@ -1,0 +1,12 @@
+{
+  "name": "ehya-sqlite-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web Worker that implements the androidx.sqlite WebWorkerSQLiteDriver protocol on top of SQLite WASM (OPFS-backed when available).",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "worker.js",
+  "dependencies": {
+    "@sqlite.org/sqlite-wasm": "^3.50.1-build1"
+  }
+}
