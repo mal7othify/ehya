@@ -12,6 +12,9 @@ object Dimens {
   val PaddingNormal = 16.dp
   val PaddingLarge = 24.dp
   val IllustrationSize = 180.dp
+
+  /** The illustration in the detail page header, smaller than on a play card. */
+  val DetailIllustrationSize = 132.dp
   val LogoSize = 160.dp
 
   /** Cards and reading columns never grow wider than this, whatever the window size. */
