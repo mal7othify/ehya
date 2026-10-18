@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="51.2 51.2 409.6 409.6" fill="none">
+  <!-- Artwork from shared/src/commonMain/composeResources/files/ehya-icon.svg, centred and enlarged for the 1024pt icon canvas. -->
+  <g transform="translate(6 6)">
+    <path d="M250.853 143.418V131.418" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#897239"/>
+    <path d="M248.139 106.11C246.638 106.85 245.3 107.882 244.202 109.144C243.104 110.406 242.268 111.874 241.742 113.463C241.217 115.051 241.012 116.728 241.141 118.397C241.27 120.065 241.729 121.691 242.492 123.18C244.059 126.2 246.752 128.483 249.989 129.536C253.225 130.589 256.745 130.326 259.79 128.805" stroke-width="5" stroke-linecap="round" stroke="#897239"/>
+  </g>
+</svg>

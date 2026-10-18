@@ -1,0 +1,45 @@
+{
+  "fill" : {
+    "automatic-gradient" : "extended-srgb:0.86275,0.88235,0.91373,1.00000"
+  },
+  "groups" : [
+    {
+      "name" : "Book",
+      "layers" : [
+        {
+          "image-name" : "book.svg",
+          "name" : "Book",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [ 0, 0 ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Mosque",
+      "layers" : [
+        {
+          "image-name" : "crescent.svg",
+          "name" : "Crescent",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [ 0, 0 ]
+          }
+        },
+        {
+          "image-name" : "mosque.svg",
+          "name" : "Dome and wall",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [ 0, 0 ]
+          }
+        }
+      ]
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [ "watchOS" ],
+    "squares" : "shared"
+  }
+}
