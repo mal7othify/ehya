@@ -21,7 +21,9 @@ class MainActivity : ComponentActivity() {
     registerForActivityResult(ActivityResultContracts.RequestPermission()) { }
 
   override fun onCreate(savedInstanceState: Bundle?) {
-    installSplashScreen()
+    // Drop the system splash the moment Compose has drawn its first frame, skipping the default
+    // shrink-and-fade: the loading logo sits at the same size and spot, so it simply takes over.
+    installSplashScreen().setOnExitAnimationListener { it.remove() }
     super.onCreate(savedInstanceState)
     enableEdgeToEdge()
     requestNotificationPermissionIfNeeded()

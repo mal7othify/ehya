@@ -55,6 +55,9 @@ import com.eillia.ehya.ui.components.DraggableCard
 import com.eillia.ehya.ui.components.LoadingLogo
 import com.eillia.ehya.ui.components.PulsingCircles
 import com.eillia.ehya.ui.components.SunnahContent
+import com.eillia.ehya.ui.components.contentEnter
+import com.eillia.ehya.ui.components.loadingExit
+import com.eillia.ehya.ui.components.rememberLaunchHold
 import com.eillia.ehya.ui.theme.BlackOlive
 import com.eillia.ehya.ui.theme.CardGradient
 import com.eillia.ehya.ui.theme.Dimens
@@ -69,10 +72,18 @@ private const val VISIBLE_CARDS = 3
 @Composable
 fun PlayScreen(modifier: Modifier = Modifier, viewModel: PlayViewModel = koinViewModel()) {
   val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+  val holding = rememberLaunchHold()
+  val shownState = if (holding) PlayUiState.Loading else uiState
   Box(modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
     AnimatedContent(
-      targetState = uiState,
-      transitionSpec = { fadeIn() togetherWith fadeOut() },
+      targetState = shownState,
+      transitionSpec = {
+        if (initialState is PlayUiState.Loading) {
+          contentEnter() togetherWith loadingExit()
+        } else {
+          fadeIn() togetherWith fadeOut()
+        }
+      },
       contentKey = { it::class },
       label = "play"
     ) { state ->

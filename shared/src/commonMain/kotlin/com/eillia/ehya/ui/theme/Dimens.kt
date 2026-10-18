@@ -17,6 +17,13 @@ object Dimens {
   val DetailIllustrationSize = 132.dp
   val LogoSize = 160.dp
 
+  /**
+   * Box for the loading logo. The artwork fills about 45% of it, which puts the visible logo at
+   * ~118dp: the same size the Android 12 system splash draws its icon, so the hand-over does not
+   * jump. The iOS launch image is sized to match (see iosApp LaunchLogo.imageset).
+   */
+  val SplashLogoSize = 262.dp
+
   /** Cards and reading columns never grow wider than this, whatever the window size. */
   val MaxContentWidth = 560.dp
 
