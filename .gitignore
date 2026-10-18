@@ -64,7 +64,6 @@ captures/
 # Keystore files
 *.jks
 *.keystore
-*.kotlin
 
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
@@ -93,3 +92,19 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 lint/reports/
+
+# Kotlin Multiplatform / Compose Multiplatform
+.kotlin/
+**/build/
+!src/**/build/
+node_modules/
+
+# Xcode (keep the project file and shared workspace data)
+xcuserdata/
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+**/xcshareddata/WorkspaceSettings.xcsettings
+iosApp/Configuration/Config.local.xcconfig
+
